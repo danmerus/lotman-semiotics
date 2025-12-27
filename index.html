@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Московско-тартуская семиотическая школа</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Московско-тартуская семиотическая школа</h1>
+    <p class="subtitle">Интерактивная карта связей ученых</p>
+  </header>
+
+  <main>
+    <div id="graph-container">
+      <svg id="network-graph"></svg>
+    </div>
+
+    <div id="tooltip" class="tooltip hidden">
+      <div class="tooltip-content">
+        <h3 class="tooltip-name"></h3>
+        <p class="tooltip-years"></p>
+        <p class="tooltip-bio"></p>
+        <span class="tooltip-hint">Нажмите для подробностей</span>
+      </div>
+    </div>
+
+    <aside id="info-panel" class="info-panel hidden">
+      <button class="close-btn" onclick="closePanel()">&times;</button>
+      <div class="panel-content">
+        <header class="panel-header">
+          <h2 class="panel-name"></h2>
+          <p class="panel-years"></p>
+        </header>
+
+        <section class="panel-section">
+          <h3>Биография</h3>
+          <div class="panel-bio"></div>
+        </section>
+
+        <section class="panel-section">
+          <h3>Научные интересы</h3>
+          <ul class="panel-interests"></ul>
+        </section>
+
+        <section class="panel-section">
+          <h3>Достижения</h3>
+          <ul class="panel-achievements"></ul>
+        </section>
+
+        <section class="panel-section">
+          <h3>Основные труды</h3>
+          <ul class="panel-works"></ul>
+        </section>
+
+        <section class="panel-section">
+          <h3>Связи</h3>
+          <div class="panel-connections"></div>
+        </section>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Интерактивная визуализация научных связей</p>
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/graph.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
